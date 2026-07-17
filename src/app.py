@@ -8,6 +8,7 @@ from router import route
 
 def greet(profile):
     print("=" * 40)
+    print(" SoraBrain: Hello! I'm your personal AI assistant.")
 
     if profile.get("name"):
         print(f" Welcome back, {profile['name']}!")

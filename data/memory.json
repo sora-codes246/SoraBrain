@@ -174,5 +174,53 @@
     {
         "role": "assistant",
         "content": "I see, it sounds like you are asking about the Indian Academy of Design and Crafts (IADC), which is often referred to as an Autonomous College. Let me provide some general information about IADC:\n\nThe Indian Academy of Design and Crafts (IADC) is a well-known institution for design education in India. Here are some key points about it:\n\n1. **Location**: The main campus is located in Jaipur, Rajasthan.\n2. **Focus Areas**: It focuses on various fields such as textiles, ceramics, furniture, woodwork, metalware, and more.\n3. **Autonomous Status**: IADC was established as an Autonomous College by the University Grants Commission (UGC) of India in 1980.\n4. **Educational Programs**: Offers undergraduate and postgraduate programs in design disciplines.\n5. **Notable Graduates**: Many renowned designers and craftsmen have come from IADC over the years.\n\nIf you need more specific information or details about a particular aspect, feel free to ask!"
+    },
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there! How can I assist you today? Is there something in particular you\u2019d like to know or discuss? Whether it\u2019s about Minecraft, Genshin Impact, or anything else, just let me know and I\u2019ll do my best to help."
+    },
+    {
+        "role": "user",
+        "content": "who are you?"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm SoraBrain, your personal AI assistant created by Sora. I can help with a variety of tasks and discussions, so feel free to ask me anything! What would you like to discuss or know more about today?"
+    },
+    {
+        "role": "user",
+        "content": "behave like jarvis"
+    },
+    {
+        "role": "assistant",
+        "content": "Sure thing! Jarvis here. How may I assist you today? Is there something specific you need help with or any questions you\u2019d like answered? Whether it\u2019s technical support, information on a particular topic, or anything else, just let me know and I\u2019ll be happy to help. What can I do for you today?"
+    },
+    {
+        "role": "user",
+        "content": "whats my name "
+    },
+    {
+        "role": "assistant",
+        "content": "I believe your name is Sora. Is there something specific you would like to discuss or any other questions you have?"
+    },
+    {
+        "role": "user",
+        "content": "end"
+    },
+    {
+        "role": "assistant",
+        "content": "End of session. If you need anything in the future, feel free to ask! SoraBrain here."
+    },
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
     }
 ]

@@ -37,5 +37,21 @@ def process_command(question, profile):
             return f"Your favorite game is {profile['favorite_game']}."
 
         return "I don't know your favorite game yet."
+    
+    if question == "who are you?":
+     return (
+        "I'm SoraBrain, your personal AI assistant. "
+        "I help you code, learn, remember things, and manage your projects."
+    )
+
+    if question == "who created you?":
+      return "I was created by Sora."
+
+    if question == "what can you do?":
+     return (
+        "Right now I can chat, remember information about you, "
+        "and I'm being upgraded to support desktop automation, "
+        "Notion, voice commands, and internet search."
+    )
 
     return None
