@@ -1,13 +1,10 @@
 from commands import process_command
+from planner import choose_tool
 from tools.manager import execute_tool
 
 
 def route(question, profile):
-    """
-    Decide how SoraBrain should handle the user's message.
-    """
 
-    # 1. Check built-in commands first
     response = process_command(question, profile)
 
     if response:
@@ -16,16 +13,18 @@ def route(question, profile):
             "response": response,
         }
 
-    # 2. Check if a tool should handle the request
-    tool = execute_tool(question)
+    plan = choose_tool(question)
 
-    if tool:
-        return {
-            "type": "tool",
-            "tool": tool,
-        }
+    if plan["tool"] != "AI":
 
-    # 3. Otherwise send it to the AI
+        response = execute_tool(question)
+
+        if response:
+            return {
+                "type": "tool",
+                "tool": response,
+            }
+
     return {
         "type": "ai",
     }

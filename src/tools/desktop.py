@@ -1,58 +1,78 @@
 import subprocess
 
+
 CHROME_PATH = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
 
-def open_program(program, path=None):
+def open_program(name, command):
     try:
-        if path:
-            subprocess.Popen(path)
-        else:
-            subprocess.Popen(program)
-
-        return f"✅ Opening {program.title()}..."
-
+        subprocess.Popen(command)
+        return f"✅ Opening {name}..."
     except Exception as e:
-        return f"❌ Error opening {program}: {e}"
+        return f"❌ Error opening {name}: {e}"
 
 
 def run_desktop_command(question):
 
     question = question.lower()
 
+    # -------------------------
+    # Chrome
+    # -------------------------
+    if "chrome" in question:
+        return open_program("Google Chrome", CHROME_PATH)
 
-    OPEN_WORDS = [
-        "open",
-        "launch",
-        "start",
-        "run",
-    ]
+    # -------------------------
+    # Calculator
+    # -------------------------
+    if any(word in question for word in [
+        "calculator",
+        "calc",
+        "calculate",
+        "calculation",
+    ]):
+        return open_program("Calculator", "calc")
 
-    if any(word in question for word in OPEN_WORDS):
+    # -------------------------
+    # Notepad
+    # -------------------------
+    if any(word in question for word in [
+        "notepad",
+        "notes",
+        "text editor",
+    ]):
+        return open_program("Notepad", "notepad")
 
-      
+    # -------------------------
+    # Paint
+    # -------------------------
+    if "paint" in question:
+        return open_program("Paint", "mspaint")
 
-        if "chrome" in question:
-            return open_program("Google Chrome", CHROME_PATH)
+    # -------------------------
+    # PowerShell
+    # -------------------------
+    if "powershell" in question:
+        return open_program("PowerShell", "powershell")
 
-        if "calculator" in question:
-            return open_program("Calculator", "calc")
+    # -------------------------
+    # Command Prompt
+    # -------------------------
+    if any(word in question for word in [
+        "cmd",
+        "command prompt",
+        "terminal",
+    ]):
+        return open_program("Command Prompt", "cmd")
 
-        if "notepad" in question:
-            return open_program("Notepad", "notepad")
-
-        if "paint" in question:
-            return open_program("Paint", "mspaint")
-
-        if "powershell" in question:
-            return open_program("PowerShell", "powershell")
-
-        if "cmd" in question:
-            return open_program("Command Prompt", "cmd")
-
-        if "explorer" in question:
-            return open_program("File Explorer", "explorer")
-
-  
+    # -------------------------
+    # File Explorer
+    # -------------------------
+    if any(word in question for word in [
+        "explorer",
+        "file explorer",
+        "files",
+    ]):
+        return open_program("File Explorer", "explorer")
 
     return None
